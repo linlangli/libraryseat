@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/edit_mine">
+
+
+    <EditText
+        android:id="@+id/edit_changeSignature"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@drawable/edit_replay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/edit_signature"
+        android:textSize="12sp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:gravity="top"
+        android:paddingTop="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/butt_changeSignature"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:background="@color/transparent"
+        android:layout_marginStart="10dp"
+        android:text="@string/edit_info"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_changeSignature"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"/>
+
+</android.support.constraint.ConstraintLayout>

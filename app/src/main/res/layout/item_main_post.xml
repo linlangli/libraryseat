@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/item_main_post_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_main_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/avatar"/>
+    
+    <TextView
+        android:id="@+id/text_main_post_name"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@id/img_main_avatar"
+        app:layout_constraintStart_toEndOf="@id/img_main_avatar" />
+
+    <TextView
+        android:id="@+id/text_main_post_title"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text_main_post_name"
+        app:layout_constraintStart_toEndOf="@id/img_main_avatar"/>
+
+    <ImageButton
+        android:id="@+id/imgButt_main_replyPost"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@id/text_main_post_title"
+        app:layout_constraintTop_toTopOf="@id/imgButt_main_collectPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/transparent"
+        android:src="@drawable/butt_replay"
+        android:layout_marginEnd="10dp"/>
+
+    <ImageButton
+        android:id="@+id/imgButt_main_praisePost"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toTopOf="@id/imgButt_main_collectPost"
+        app:layout_constraintEnd_toStartOf="@id/imgButt_main_collectPost"
+        android:background="@color/transparent"
+        android:src="@drawable/butt_praise"
+        android:layout_marginEnd="30dp"/>
+
+    <ImageButton
+        android:id="@+id/imgButt_main_collectPost"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@id/text_main_post_title"
+        app:layout_constraintEnd_toStartOf="@id/imgButt_main_replyPost"
+        android:src="@drawable/butt_collect"
+        android:background="@color/transparent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"/>
+    
+    <TextView
+        android:id="@+id/text_praise_num"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/imgButt_main_praisePost"
+        app:layout_constraintTop_toTopOf="@id/imgButt_main_praisePost"
+        app:layout_constraintBottom_toBottomOf="@id/imgButt_main_praisePost"/>
+
+    <TextView
+        android:id="@+id/text_main_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/imgButt_main_praisePost"
+        app:layout_constraintStart_toStartOf="@id/text_main_post_name"/>
+
+</android.support.constraint.ConstraintLayout>

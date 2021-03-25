@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/img_child_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/avatar"/>
+
+    <TextView
+        android:id="@+id/text_child_post_name"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@id/img_child_avatar"
+        app:layout_constraintStart_toEndOf="@id/img_child_avatar"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:text="Grooter"/>
+
+    <TextView
+        android:id="@+id/text_child_date"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text_child_post_name"
+        app:layout_constraintTop_toBottomOf="@id/text_child_post_name"
+        android:gravity="center_vertical"
+        android:text="2018-10-27"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/text_child_post_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_child_post_content"
+        app:layout_constraintTop_toBottomOf="@id/text_child_date"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:text="title"/>
+
+    <TextView
+        android:id="@+id/text_child_post_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/text_child_post_title"
+        app:layout_constraintStart_toEndOf="@id/img_child_avatar"
+        android:text="content"/>
+
+
+    <ImageButton
+        android:id="@+id/imgButt_child_praisePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_child_post_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/transparent"
+        android:src="@drawable/butt_praise"
+        app:layout_constraintBottom_toBottomOf="@id/text_child_post_name"
+        android:layout_marginEnd="45dp"/>
+
+    <TextView
+        android:id="@+id/text_praise_num"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/imgButt_child_praisePost"
+        app:layout_constraintTop_toTopOf="@id/imgButt_child_praisePost"
+        app:layout_constraintBottom_toBottomOf="@id/imgButt_child_praisePost"/>
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/imgButt_child_replayPost"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintTop_toTopOf="@id/text_child_post_title"-->
+        <!--app:layout_constraintBottom_toBottomOf="@id/text_child_post_title"-->
+        <!--app:layout_constraintEnd_toStartOf="@id/imgButt_child_praisePost"-->
+        <!--android:src="@drawable/butt_collect"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:layout_marginEnd="10dp"-->
+        <!--android:layout_marginTop="5dp"/>-->
+
+</android.support.constraint.ConstraintLayout>
